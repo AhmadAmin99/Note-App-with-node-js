@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Note APP</title>
+</head>
+<body>
+   <div class="my-5">
+    <h1 class="ml11 text-center text-light">
+        <span class="text-wrapper">
+          <span class="line line1"></span>
+          <span class="letters">Note App with Nodejs and MySQL</span>
+        </span>
+      </h1>
+   </div>
+    <div class="popupBox">
+        <div class="popup">
+          <div class="content">
+            <header>
+                <p>Add a new Note</p>
+                <i class="fa-solid fa-xmark"></i>
+             </header>
+            <form action="#" class="form-control">
+                <div class="row1 title">
+                    <label for="title">Title</label>
+                    <input class="form-control" type="text" id="title">
+                    <div id="alertTitle" class="alert alert-danger my-2">Please enter the Title</div>
+                </div>
+                <div class="row1 description">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" name="" id="description"></textarea>
+                    <div id="alertDesc" class="alert alert-danger my-2">Please enter the Title</div>
+
+                </div>
+
+                <button class="btn btn-outline-info" id="addNote">Add Note</button>
+                <button class="btn btn-outline-success" id="update" onclick="updateBTN()">Update</button>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="options container m-auto text-center my-5">
+        <input type="text" onkeyup="search(this.value)" id="search" placeholder="search notes" class="form-control my-3">
+        <Button class="btn btn-info w-50 mt-3" id="addBtn">Add note</Button>
+        <Button class="btn btn-danger w-50 mt-3" id="addBtn" onclick="deleteAll()">Delete All</Button>
+    </div>
+    <div class="wrapper" id="notes">
+           
+     
+    </div>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
